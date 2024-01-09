@@ -62,4 +62,5 @@ public class MainActivity extends AppCompatActivity {
     //    - send the melody from the NewMelodyActivity via intent
     //    - get the new melody via registerForActivityResult + adapter.notifyInserted(indexOf)
     // 3. Get the item image with API call
+    //    - add the image field to the Model class
 }

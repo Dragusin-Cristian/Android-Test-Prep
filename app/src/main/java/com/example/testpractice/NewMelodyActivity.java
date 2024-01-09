@@ -12,6 +12,7 @@ public class NewMelodyActivity extends AppCompatActivity {
 
     EditText etArtist;
     EditText etTitle;
+    EditText etCover;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,11 @@ public class NewMelodyActivity extends AppCompatActivity {
 
         etArtist = findViewById(R.id.etArtist);
         etTitle = findViewById(R.id.etTitle);
+        etCover = findViewById(R.id.etCover);
     }
 
     public void addMelody (View v) {
-        Melody melody = new Melody(etTitle.getText().toString(), etArtist.getText().toString());
+        Melody melody = new Melody(etTitle.getText().toString(), etArtist.getText().toString(), etCover.getText().toString());
         Intent intent = new Intent();
         intent.putExtra("newMelody", melody);
         setResult(RESULT_OK, intent);
